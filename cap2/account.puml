@@ -1,0 +1,21 @@
+@startuml
+
+class Account {
+
+    - name :  String
+
+    + void setName(String name)
+    + String getName()
+
+}
+
+
+class AccountTest{
+
+    + static void main(String args[])
+
+}
+
+
+
+@enduml
