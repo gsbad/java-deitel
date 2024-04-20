@@ -9,11 +9,8 @@ public class AccountTest
         Account account1 = new Account("Gustavo Sá", 15);
         Account account2 = new Account("Miguel Sá", 15.7);
 
-        // exibe saldo inicial de cada objeto
-        System.out.printf("%s balance: $%.2f %n",
-        account1.getName(),account1.getBalance());
-        System.out.printf("%s balance: $%.2f %n%n",
-        account2.getName(),account2.getBalance());
+        displayAccount(account1);
+        displayAccount(account2);
 
         System.out.print("Enter deposit amount for account1: "); // prompt
         double depositAmount = input.nextDouble(); // obtém a entrada do usuário
@@ -21,11 +18,8 @@ public class AccountTest
         depositAmount);
         account1.deposit(depositAmount); // adiciona o saldo de account1
 
-        // exibe os saldos
-        System.out.printf("%s balance: $%.2f %n",
-        account1.getName(),account1.getBalance());
-        System.out.printf("%s balance: $%.2f %n%n",
-        account2.getName(),account2.getBalance());
+        displayAccount(account1);
+        displayAccount(account2);
 
         System.out.print("Enter deposit amount for account2: "); // prompt
         depositAmount = input.nextDouble(); // obtém a entrada do usuário
@@ -33,11 +27,8 @@ public class AccountTest
         depositAmount);
         account2.deposit(depositAmount); // adiciona ao saldo de account2
 
-        // exibe os saldos
-        System.out.printf("%s balance: $%.2f %n",
-        account1.getName(),account1.getBalance());
-        System.out.printf("%s balance: $%.2f %n%n",
-        account2.getName(),account2.getBalance());
+        displayAccount(account1);
+        displayAccount(account2);
 
         // Saques
         System.out.printf("Gostaria de sacar algum valor %s?%n", account1.getName());
@@ -45,5 +36,9 @@ public class AccountTest
         System.out.printf("Gostaria de sacar algum valor %s?%n", account2.getName());
         account1.withdraw(input.nextDouble());
 
+    }
+    public static void displayAccount(Account accountToDisplay){
+        System.out.printf("%s balance: $%.2f %n",
+        accountToDisplay.getName(),accountToDisplay.getBalance());
     }
 }
