@@ -19,6 +19,19 @@ public class Account{
         if (depositAmount > 0.0) // se depositAmount for válido
         balance = balance + depositAmount; // o adiciona ao saldo
     }
+
+    public void withdraw(double withdrawAmount){
+        if( withdrawAmount <= balance){
+            balance -= withdrawAmount;
+            System.out.printf("$ %.2f foram sacados do total de $ %.2f , novo saldo: $ %.2f%n",
+             withdrawAmount,
+             (balance + withdrawAmount), 
+             balance);
+        }
+        else
+            System.out.println("Não há saldo o suficente para saque!");
+    }
+
     // método retorna o saldo da conta
     public double getBalance()
     {

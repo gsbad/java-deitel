@@ -39,5 +39,11 @@ public class AccountTest
         System.out.printf("%s balance: $%.2f %n%n",
         account2.getName(),account2.getBalance());
 
+        // Saques
+        System.out.printf("Gostaria de sacar algum valor %s?%n", account1.getName());
+        account1.withdraw(input.nextDouble());
+        System.out.printf("Gostaria de sacar algum valor %s?%n", account2.getName());
+        account1.withdraw(input.nextDouble());
+
     }
 }
