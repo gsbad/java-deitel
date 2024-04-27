@@ -1,4 +1,4 @@
-package exercicios.cap2;
+
 
 public class Exibe{
     public static void main(String args[]){
