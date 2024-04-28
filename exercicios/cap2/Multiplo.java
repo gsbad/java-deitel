@@ -18,5 +18,7 @@ public class Multiplo{
             System.out.printf("O primeiro numero digitado %d não é multiplo de %d!%n", num1, num2);
         if((num2 % num1) == 0)
             System.out.printf("O segundo numero digitado %d é multiplo de %d!%n", num2, num1);
+        // Fechando o scanner após terminar de usá-lo
+        input.close();    
     }
 }

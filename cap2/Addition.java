@@ -17,6 +17,9 @@ public class Addition{
         sum = number1 + number2;
 
         System.out.printf("A soma dos dois números é: %d%n", sum);
+
+        // Fechando o scanner após terminar de usá-lo
+        input.close();
     }
 
 }

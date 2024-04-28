@@ -15,5 +15,7 @@ public class ParImpar{
             System.out.printf("%d é ímpar!%n", numero);
         if(numero == 0)
             System.out.println("Digitou zero!");    
+        // Fechando o scanner após terminar de usá-lo
+        input.close();            
     }
 }

@@ -26,6 +26,7 @@ public class Calculadora{
         divisao =  numero1 / numero2;
 
         System.out.printf("A soma dos dois inteiros é %d%nO produto dos dois inteiros é %d%nA diferença dos dois inteiros é %d%nA divisão dos dois inteiros é %.2f%n", soma, produto, diferenca, divisao);
-
+        // Fechando o scanner após terminar de usá-lo
+        input.close();
     }
 }

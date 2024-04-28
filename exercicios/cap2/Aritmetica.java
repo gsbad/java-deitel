@@ -46,6 +46,7 @@ public class Aritmetica{
         
         System.out.printf("*%n**%n***%n****%n*****%n");
             
-
+        // Fechando o scanner após terminar de usá-lo
+        input.close();
     }
 }

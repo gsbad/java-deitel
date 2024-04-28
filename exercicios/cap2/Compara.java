@@ -25,6 +25,7 @@ public class Compara{
         if(numero1 == numero2){
             System.out.print("Esses numeros sao iguais!\n");
         }
-
+        // Fechando o scanner após terminar de usá-lo
+        input.close();
     }
 }

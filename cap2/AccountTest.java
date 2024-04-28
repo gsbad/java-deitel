@@ -36,6 +36,9 @@ public class AccountTest
         System.out.printf("Gostaria de sacar algum valor %s?%n", account2.getName());
         account1.withdraw(input.nextDouble());
 
+        // Fechando o scanner após terminar de usá-lo
+        input.close();
+
     }
     public static void displayAccount(Account accountToDisplay){
         System.out.printf("%s balance: $%.2f %n",

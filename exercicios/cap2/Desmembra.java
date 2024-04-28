@@ -33,6 +33,7 @@ public class Desmembra{
         dezmilhar = (num % 10);
 
         System.out.printf("%n %d %d %d %d %d %n", dezmilhar , milhar , centena, dezena, unidade);
-
+        // Fechando o scanner após terminar de usá-lo
+        input.close();
     }
 }

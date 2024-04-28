@@ -12,6 +12,8 @@ public class Demo{
 		lastName = input.nextLine();
 		
 		displayName(firstName, lastName);
+        // Fechando o scanner após terminar de usá-lo
+        input.close();		
 	}
 	
 	public static void displayName(String firstName, String lastName){

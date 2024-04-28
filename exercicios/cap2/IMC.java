@@ -27,5 +27,7 @@ public class IMC {
             System.out.println("Voce esta com sobrepeso!");
         if(imc > 30)
             System.out.println("Voce esta obeso!");
+        // Fechando o scanner após terminar de usá-lo
+        input.close();            
     }    
 }
