@@ -2,7 +2,7 @@ package cap10;
 
 public class PayableInterfaceTest {
     public static void main(String[] args) {
-        //cria array Payable de 4 elementos
+        //cria array Payable de 7 elementos
         Payable[] payableObjects = new Payable[7];
 
         payableObjects[0] = new Invoice("01234", "seat", 2, 375.00);
