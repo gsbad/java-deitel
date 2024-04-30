@@ -1,6 +1,6 @@
 package cap10;
 
-public abstract class Employee {
+public abstract class Employee implements Payable{
     private final String firstName;
     private final String lastName;
     private final String socialSecurityNumber;
@@ -23,6 +23,4 @@ public abstract class Employee {
     public String toString(){
         return String.format("%s %s%nSocial secutiry number: %s", getFirstName(),getLastName(),getSocialSecurityNumber());
     }
-    //O método abstract deve ser sobrescrito pelas subclasses concretas
-    public abstract double earnings();
 }

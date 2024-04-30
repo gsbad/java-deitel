@@ -21,7 +21,7 @@ public class HourlyEmployee extends Employee{
     }
     
     @Override
-    public double earnings() {
+    public double getPaymentAmount() {
         if(getHours() <= 40) //nenhuma hora extra
             return (getWage() * getHours());
         else

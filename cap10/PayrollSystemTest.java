@@ -15,13 +15,13 @@ public class PayrollSystemTest {
         System.out.println("Employees processed individualy: ");
         
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-            salariedEmployee, "Earned", salariedEmployee.earnings());
+            salariedEmployee, "Earned", salariedEmployee.getPaymentAmount());
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-            hourlyEmployee, "Earned", hourlyEmployee.earnings());
+            hourlyEmployee, "Earned", hourlyEmployee.getPaymentAmount());
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-            comissionEmployee, "Earned", comissionEmployee.earnings());
+            comissionEmployee, "Earned", comissionEmployee.getPaymentAmount());
         System.out.printf("%n%s%n%s: $%,.2f%n%n",
-            basePlusComissionEmployee, "Earned", basePlusComissionEmployee.earnings());
+            basePlusComissionEmployee, "Earned", basePlusComissionEmployee.getPaymentAmount());
             
 
         //cria um array Employee de 4 elementos
@@ -47,7 +47,7 @@ public class PayrollSystemTest {
                 System.out.printf("new base salary with 10%% incrase is: $%,.2f%n",
                     employee.getBaseSalary());
             }
-            System.out.printf("earned $%,.2f%n%n", currentEmployee.earnings());
+            System.out.printf("earned $%,.2f%n%n", currentEmployee.getPaymentAmount());
         }
 
         //obtem o nome do tipo de cada objeto no array employees (getClass e getName)

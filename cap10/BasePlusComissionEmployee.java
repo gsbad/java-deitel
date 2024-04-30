@@ -25,9 +25,9 @@ public class BasePlusComissionEmployee extends ComissionEmployee{
     }
 
     @Override
-    public double earnings() {
+    public double getPaymentAmount() {
         //sobrescreve earnings de ComissionEmployee c a diferença de que há a soma pelo salário base
-        return (getBaseSalary() + super.earnings());
+        return (getBaseSalary() + super.getPaymentAmount());
     }
 
     @Override
