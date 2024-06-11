@@ -3,6 +3,7 @@ package cap14;
 public class StringBuilderAppend {
     public static void main(String[] args) {
         //Metodos append da classe StringBuilder
+        
         Object objectRef = "hello"; //objeto com uma literal string
         String string = "goodbye";
         char[] charArray = {'a', 'b', 'c', 'd', 'e', 'f'};
@@ -40,6 +41,7 @@ public class StringBuilderAppend {
               .append(doubleValue)
               .append(newLine)
               .append(lastBuffer);
+
         System.out.printf("%nbuffer contains: %n%s%n", buffer.toString());
     }
 }
