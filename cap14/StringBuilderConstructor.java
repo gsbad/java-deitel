@@ -21,7 +21,7 @@ public class StringBuilderConstructor {
 
         //novo tamanho
         b4.setLength(23);
-        System.out.printf("%nnew length = %d%nb4 = \"%s\"", b4.length(), b4.toString());
+        System.out.printf("%nnew length = %d%nb4 = \"%s\"%n", b4.length(), b4.toString());
 
     }
 }

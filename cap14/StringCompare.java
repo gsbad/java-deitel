@@ -32,8 +32,8 @@ public class StringCompare {
 
         //testa regionMatches(ignora maiuscula e minusculas)s
         if(s3.regionMatches(true, 0, s4, 0, 5))
-            System.out.printf("%nPrimeiros 5 caracteres de s3 e s4 sao iguais (se o case for ignorado)");
+            System.out.printf("%nPrimeiros 5 caracteres de s3 e s4 sao iguais (se o case for ignorado)%n");
         else    
-            System.out.printf("%nPrimeiros 5 caracteres de s3 e s4 nao sao iguais (se o case for ignorado)");
+            System.out.printf("%nPrimeiros 5 caracteres de s3 e s4 nao sao iguais (se o case for ignorado)%n");
     }
 }
