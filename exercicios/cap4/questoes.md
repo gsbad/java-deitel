@@ -2,19 +2,74 @@
 
 ### 4.10 
 Compare e contraste a instrução de seleção única if e a instrução de repetição while. Qual é a semelhança dessas duas instruções? Qual é a diferença?
+```
+Ambas são inicializadas com uma condicional antes do bloco de código!
+```
 
 ### 4.11
 Explique o que acontece quando um programa Java tenta dividir um inteiro por outro. O que acontece para a parte fracionária do cálculo?
 Como você pode evitar esse resultado?
+```
+Quando voce divide um numero inteiro pelo outro em java o resultado é um inteiro. A parte fracionária é descartada.
+Para evitar esse resultado deve-se converter o dividendo e o divisor em double ou float antes da divisão.
+```
 
 ### 4.12
 Descreva as duas maneiras como as instruções de controle podem ser combinadas.
+```
+Aninhamento (nesting) e Encadeamento (chaining)
+```
 
 ### 4.13
 Que tipo de repetição seria apropriado para calcular a soma dos primeiros 100 inteiros positivos? Que tipo seria apropriado para calcular a soma de um número arbitrário de inteiros positivos? Descreva brevemente como cada uma dessas tarefas poderia ser realizada.
+**Soma dos primeiros 100 inteiros positivos:**
+```java
+int sum; 
+for(int i = 1; i <= 100; i++)
+    sum += i;
+```
 
+**Soma dos primeiros 100 inteiros positivos:**
+```java
+package exercicios.cap4;
+import java.util.Scanner;
+
+public class SomaArbitraria{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        boolean flag = true;
+        int sum = 0;
+        int number = 0;
+
+
+        System.out.println("Digite um inteiro positivo: ");
+
+        while(flag){
+            number = input.nextInt();
+            if(number <= 0){
+                System.out.println("Número inválido! Digite um inteiro positivo!");
+                flag = true;
+            }else if(number > 0){
+                int cont = 1;
+                while(cont <= number){
+                    sum += cont;
+                    cont++;
+                }
+                flag = false;
+            }
+        }
+
+        System.out.printf("%n%nO somatório do inteiro %d é %d%n", number, sum);
+        input.close();   
+    }   
+}
+```
 ### 4.14 
 Qual é a diferença entre pré-incrementar e pós-incrementar uma variável?
+```
+O préincremento incrementa o valor da variável antes da mesma ser usada na expressão!
+O pósincremento incrementa o valor da variável após a mesma ser usada na expressão!
+```
 
 ### 4.15 
 Identifique e corrija os erros em cada um dos seguintes fragmentos de código. [Observação: pode haver mais de um erro em cada trecho de código.]
