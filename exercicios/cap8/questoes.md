@@ -1,4 +1,6 @@
-8.2(Com base na Seção 8.14) Explique a noção de acesso a pacotes no Java. Explique os aspectos negativos do acesso de pacote.
+# Questões - CAP7
+### 8.2
+**(Com base na Seção 8.14)** Explique a noção de acesso a pacotes no Java. Explique os aspectos negativos do acesso de pacote.
 8.3O que acontece quando um tipo de retorno, mesmo void, é especificado para um construtor?
 8.4(Classe Rectangle) Crie uma classe Rectangle com os atributos length e width, cada um dos quais assume o padrão de 1. Forneça
 os métodos que calculam o perímetro e a área do retângulo. A classe tem métodos set e get para o comprimento (length) e a largura

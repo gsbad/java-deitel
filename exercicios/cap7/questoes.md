@@ -1,4 +1,6 @@
-7.6Preencha as lacunas em cada uma das seguintes afirmações:
+# Questões - CAP7
+### 7.6
+Preencha as lacunas em cada uma das seguintes afirmações:
 a) O array unidimensional p contém quatro elementos. Os nomes desses elementos são ________, ________, ________ e ________.
 b) Nomear um array, declarar seu tipo e especificar o número de dimensões no array é chamado de ________ array.
 c) Em um array bidimensional, o primeiro índice identifica o ________ de um elemento e o segundo índice identifica o ________ de
