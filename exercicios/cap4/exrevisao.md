@@ -106,15 +106,15 @@ a) while (c <= 5)
 {
     product *= c;
     ++c;
-}
+} - **CORRETO**
 b) if (gender == 1)
         System.out.println("Woman");
     else
         System.out.println("Man");
+    - **CORRETO**
 4.9
 O que há de errado com a instrução while a seguir?
 while (z >= 0){
     sum += z;
     --z;
-}
-//sem decremento
+} - **CORRETO**

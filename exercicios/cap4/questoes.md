@@ -75,7 +75,13 @@ O pósincremento incrementa o valor da variável após a mesma ser usada na expr
 Identifique e corrija os erros em cada um dos seguintes fragmentos de código. [Observação: pode haver mais de um erro em cada trecho de código.]
 a) 
 ```java
-if (age >= 65);
+if (age >= 65); // - ERRO, PONTO E VIRGULA APOS A CONDICIONAL
+    System.out.println("Age is greater than or equal to 65");
+else
+    System.out.println("Age is less than 65)";
+```
+```java
+if (age >= 65) // CORRIGIDA
     System.out.println("Age is greater than or equal to 65");
 else
     System.out.println("Age is less than 65)";
@@ -83,7 +89,15 @@ else
 
 b) 
 ```java
-int x = 1, total;
+int x = 1, total; //variavel "total" foi declarada mas nao foi inicializada
+while (x <= 10)
+{
+    total += x;
+    ++x;
+}
+```
+```java
+int x = 1, total = 0; //inicializada com o valor 0
 while (x <= 10)
 {
     total += x;
@@ -92,16 +106,29 @@ while (x <= 10)
 ```
 c) 
 ```java
-while (x <= 100)
+while (x <= 100) //Sem chaves para delimitar o bloco de código com mais de 1 linha
     total += x;
     ++x;
 ```
+```java
+while (x <= 100){ //Corrigido
+    total += x;
+    ++x;
+}
+```
 d) 
 ```java
-while (y > 0)
+while (y > 0) //Sem a chave de fechamento do bloco de código, e laço está preso num loop infinito a depender do valor inicial de y
 {
     System.out.println(y);
     ++y;
+```
+```java
+while (y > 0) //chave adicionada no fechamento do bloco, modificado o decremento considerando que o valor inicial de Y era positivo
+{
+    System.out.println(y);
+    --y;
+}
 ```
 
 ### 4.16
@@ -125,6 +152,20 @@ public class Mystery
     }
 } // fim da classe Mystery
 ```
+**SAÍDA:**
+```
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+Total is 365
+```
 
 ### Para os exercícios de 4.17 a 4.20, execute cada um dos seguintes passos:
 
@@ -135,11 +176,51 @@ d) Teste, depure e execute o programa Java.
 e) Processe três conjuntos completos de dados.
 
 ### 4.17
-**(Quilometragem de combustível)** Os motoristas se preocupam com a quilometragem obtida por seus automóveis. Um motorista monitorou várias viagens registrando a quilometragem dirigida e a quantidade de combustível em litros utilizados para cada tanque cheio.
-Desenvolva um aplicativo Java que receba como entrada os quilômetros dirigidos e os litros de gasolina consumidos (ambos como inteiros)
-para cada viagem. O programa deve calcular e exibir o consumo em quilômetros/litro para cada viagem e imprimir a quilometragem
+**(Quilometragem de combustível)** Os motoristas se preocupam com a quilometragem obtida por seus automóveis. Um motorista monitorou várias viagens registrando a quilometragem dirigida e a quantidade de combustível em litros utilizados para cada tanque cheio. Desenvolva um aplicativo Java que receba como entrada os quilômetros dirigidos e os litros de gasolina consumidos (ambos como inteiros) para cada viagem. O programa deve calcular e exibir o consumo em quilômetros/litro para cada viagem e imprimir a quilometragem
 total e a soma total de litros de combustível consumidos até esse ponto para todas as viagens. Todos os cálculos de média devem produzir
 resultados de ponto flutuante. Utilize classe Scanner e repetição controlada por sentinela para obter os dados do usuário.
+```java
+package exercicios.cap4;
+
+import java.util.Scanner;
+
+public class CalculaKmPorLitro {
+    public static void main(String[] args) {
+        //declara variaveis
+        Scanner input = new Scanner(System.in);
+        int qtdViagens = 1;
+        int kmTotal = 0;
+        int gasolinaTotal = 0;
+        int flag = 1;
+        
+        while (flag != -1) {
+            System.out.printf("%nInforme os dados da viagem numero %d: %n", qtdViagens);
+            //recebe entradas
+            System.out.println("\nInsira quantos km foram percorridos: ");
+            int kmDirigidos = input.nextInt();
+            System.out.println("\nInsira a quantidade de gasolina consumida: ");
+            int gasolinaConsumida = input.nextInt();
+            
+            double litrosPorKm = (double) kmDirigidos / gasolinaConsumida;
+            System.out.printf("O consumo da viagem em Kilometros por litro foi de: %.2fl/km%n", litrosPorKm);
+
+            //incrementa variaveis kmTotal e gasolinaTotal
+            kmTotal += kmDirigidos;
+            gasolinaTotal += gasolinaConsumida;
+
+            System.out.println("Relatório das viagens: ");
+            System.out.printf("Km total de todas as viagens até o momento: %d%n", kmTotal);
+            System.out.printf("Gasolina total consumida em todas as viagens até o momento: %d%n%n", gasolinaTotal);
+
+            System.out.println("Digite 1 para continuar registrando novas viagens OU -1 para sair do aplicativo!");
+            flag = input.nextInt();
+        }
+        double litrosPorKm = (double) kmTotal / gasolinaTotal;
+        System.out.printf("O consumo TOTAL da todas as viagens em Kilometros por litro foi de: %.2fl/km!%nObrigado por utilizar o app! FIM!", litrosPorKm);
+    
+    }
+}
+```
 
 ### 4.18
 **(Calculador de limite de crédito)** Desenvolva um aplicativo Java que determina se um cliente de uma loja de departamentos excedeu o limite de crédito em uma conta-corrente. Para cada cliente, os seguintes dados estão disponíveis:
