@@ -30,6 +30,6 @@ public class StaticCharMethods2 {
         
         }
 
-
+        scanner.close();
     }
 }

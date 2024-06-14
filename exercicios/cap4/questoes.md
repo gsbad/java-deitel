@@ -349,6 +349,50 @@ public class CalculaComissao {
 **(Calculador de salários)** Desenvolva um aplicativo Java que determina o salário bruto de cada um de três empregados. A empresa paga as horas normais pelas primeiras 40 horas trabalhadas por cada funcionário e 50% a mais por todas as horas trabalhadas além das 40
 horas. Você recebe uma lista de empregados, o número de horas trabalhadas por eles na semana passada e o salário-hora de cada um. Seu programa deve aceitar a entrada dessas informações para cada empregado e, então, determinar e exibir o salário bruto do empregado.
 Utilize a classe Scanner para inserir os dados.
+```java
+package exercicios.cap4;
+import java.util.Scanner;
+
+public class CalculaSalario {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int cargaBase = 40; //carga-horaria base de 40horas semanais
+        int qtdFuncionarios = 3;
+        final float txHoraExtra = 1.5f; //50% a mair por cada hora alem das 40horas semanais
+        
+        for(int funcionario = 1; funcionario <= qtdFuncionarios; funcionario++){
+            System.out.println("\nInsira os dados do funcionario numero " + funcionario);
+            
+            System.out.print("Qual o valor do salário-hora: ");
+            int valorHora = input.nextInt();
+            System.out.println();
+
+            System.out.print("Quantas hora o funcionario trabalhou na ultima semana: ");
+            int horasTrabalhadas = input.nextInt();
+            System.out.println();
+
+            int horaExtra = 0;
+            double salarioBruto;
+            double comissao = 0;
+            if(horasTrabalhadas > cargaBase){
+                horaExtra = (horasTrabalhadas - cargaBase);
+                comissao = ((horaExtra * valorHora) * txHoraExtra);
+                salarioBruto = (cargaBase * valorHora) + comissao;
+            }else{
+                salarioBruto = (horasTrabalhadas * valorHora);
+            }
+
+            System.out.printf("%n%n==== Relatório semanal - Funcionário %d ====%nCarga horária semanal base: %d%nSalário-hora: %d%nHoras trabalhadas: %d%n%n", funcionario,
+                                                                cargaBase, valorHora, horasTrabalhadas);
+            System.out.printf("Horas extras trabalhadas: %d%nValor hora-extra: %.2f%nSalário total recebido: %.2f%n%nFIM!",
+                                                    horaExtra, comissao, salarioBruto);
+            
+        }
+        
+        input.close();
+    }
+}
+```
 
 ### 4.21 
 **(Localize o maior número)** O processo de localizar o maior valor é muito utilizado em aplicativos de computador. Por exemplo, um programa que determina o vencedor de uma competição de vendas inseriria o número de unidades vendidas por cada vendedor. O vendedor que vende mais unidades ganha a competição. Escreva um programa em pseudocódigo e, então, um aplicativo Java que aceita como entrada uma série de 10 inteiros e determina e imprime o maior dos inteiros. Seu programa deve utilizar pelo menos as três variáveis a seguir:

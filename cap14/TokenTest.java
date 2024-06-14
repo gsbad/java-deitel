@@ -16,5 +16,6 @@ public class TokenTest {
         for (String string : tokens) {
             System.out.printf("%s%n", string);
         }
+        scanner.close();
     }
 }

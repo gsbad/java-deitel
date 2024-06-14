@@ -24,6 +24,6 @@ public class StaticCharMethods {
         System.out.printf("to upper case: %s%n", Character.toUpperCase(c));
         System.out.printf("to lower case: %s%n", Character.toLowerCase(c));
 
-        
+    scanner.close();   
     }
 }

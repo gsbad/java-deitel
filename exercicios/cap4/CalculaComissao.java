@@ -16,7 +16,7 @@ public class CalculaComissao {
         double item3 = 99.95;
         double item4 = 350.89;
         
-        System.out.println("Olá vendedor! Insira a quantidade vendida de cada item:");
+        System.out.println("\n\nOlá vendedor! Insira a quantidade vendida de cada item:");
 
         System.out.print("Item 1: ");
         int qtItem1 = input.nextInt();
