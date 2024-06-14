@@ -456,9 +456,39 @@ public class escreveTabela {
 
 ### 4.23 
 **(Encontre os dois números maiores)** Utilizando uma abordagem semelhante àquela do Exercício 4.21, encontre os dois maiores valores entre os 10 valores inseridos. [Observação: você só pode inserir cada número uma vez.]
+```java
+package exercicios.cap4;
+import java.util.Scanner;
 
-### 4.24 
-**(Validando entrada de usuário)** Modifique o programa na Figura 4.12 para validar suas entradas. Para qualquer  entrada, se o valor entrado for diferente de 1 ou 2, continue o loop até o usuário inserir um valor correto.
+public class DoisMaiores {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int counter = 1;
+        int number;
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        while (counter <= 10) {
+            System.out.printf("%n%nInsira o inteiro número %d: ", counter);
+            number = input.nextInt();
+            System.out.println();
+            
+            if(number > largest){
+                secondLargest = largest;
+                largest = number;
+            } else if(number > secondLargest && number != largest){
+                secondLargest = number;
+            }
+            System.out.printf("O maior número inserido até agora foi o numero = %d%n", largest); 
+            System.out.printf("O segundo maior número inserido até agora foi o numero = %d%n", secondLargest);  
+            ++counter;
+        }
+        System.out.printf("%nO maior número inserido foi %d%n", largest);
+        System.out.printf("%nO segundo maior número inserido foi %d%n", secondLargest);
+        input.close();
+    }
+}
+```
 
 ### 4.25 
 O que o seguinte programa imprime?
@@ -476,6 +506,19 @@ public class Mystery2
         }
     }
 } // fim da classe Mystery2
+```
+**SAÍDA:**
+```java
+****
+++++++++
+****
+++++++++
+****
+++++++++
+****
+++++++++
+****
+++++++++
 ```
 
 #### 4.26 
@@ -502,6 +545,19 @@ public class Mystery3
     }
 } // fim da classe Mystery3
 ```
+**SAÍDA:**
+```java
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+>>>>>>>>>>
+<<<<<<<<<<
+```
 
 ### 4.27
 **(Problema do else oscilante)** Determine a saída para cada um dos conjuntos dados de código quando x é 9 e y é 11 e quando x é 11 e y é 9. O compilador ignora o recuo em um programa Java. Da mesma forma, o compilador Java sempre associa um else com o if imediatamente precedente a menos que instruído a fazer de outro modo pela colocação de chaves ({}). À primeira vista, o programador pode
@@ -510,11 +566,21 @@ não ter certeza de qual if um else particular corresponde — essa situação �
 a)
 ```java
 if (x < 10)
-if (y > 10)
-    System.out.println("*****");
-else
-    System.out.println("#####");
-    System.out.println("$$$$$");
+    if (y > 10)
+        System.out.println("*****");
+    else
+        System.out.println("#####");
+System.out.println("$$$$$");
+```
+**SAÍDA:**
+**x = 9; y = 11;**
+```java
+*****
+$$$$$
+```
+**x = 11; y = 9;**
+```java
+("$$$$$");
 ```
 b)
 ```java
@@ -528,6 +594,16 @@ else
     System.out.println("#####");
     System.out.println("$$$$$");
 }
+```
+**SAÍDA:**
+**x = 9; y = 11;**
+```java
+*****
+```
+**x = 11; y = 9;**
+```java
+#####
+$$$$$
 ```
 
 ### 4.28 
@@ -547,14 +623,43 @@ a) Supondo que x = 5 e y = 8, a seguinte saída é produzida:
 $$$$$
 &&&&&
 ```
+```java
+if (y == 8)
+    if (x == 5)
+        System.out.println("@@@@@");
+else
+    System.out.println("#####");
+System.out.println("$$$$$");
+System.out.println("&&&&&");
+```
 
 b) Supondo que x = 5 e y = 8, a seguinte saída é produzida:
 ```
 @@@@@
 ```
+```java
+if (y == 8){
+    if (x == 5)
+        System.out.println("@@@@@");
+}else{
+    System.out.println("#####");
+    System.out.println("$$$$$");
+    System.out.println("&&&&&");
+}
+```
 c) Supondo que x = 5 e y = 8, a seguinte saída é produzida:
 ```
 @@@@@
+```
+```java
+if (y == 8){
+    if (x == 5)
+        System.out.println("@@@@@");
+}else{
+    System.out.println("#####");
+    System.out.println("$$$$$");
+    System.out.println("&&&&&");
+}
 ```
 d) Supondo que x = 5 e y = 7, a seguinte saída é produzida. [Observação: todas as três últimas instruções de saída depois do else são partes de um bloco].
 ```
@@ -562,10 +667,65 @@ d) Supondo que x = 5 e y = 7, a seguinte saída é produzida. [Observação: tod
 $$$$$
 &&&&&
 ```
+```java
+if (y == 8){
+    if (x == 5)
+        System.out.println("@@@@@");
+}else{
+    System.out.println("#####");
+    System.out.println("$$$$$");
+    System.out.println("&&&&&");
+}
+```
 
 ### 4.29 
 **(Quadrado de asteriscos)** Escreva um aplicativo que solicita ao usuário que insira o tamanho do lado de um quadrado e, então, exibe um quadrado vazio desse tamanho com asteriscos. Seu programa deve trabalhar com quadrados de todos os comprimentos de lado possíveis
 entre 1 e 20.
+```java
+package exercicios.cap4;
+import java.util.Scanner;
+public class DesenhaQuadrado {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("\nInsira o tamanho dos lados do quadrado (entre 1 e 20): ");
+        int lados = input.nextInt();
+        System.out.println();
+        
+        String comprimento = "* ";
+
+        //Valida se usuario inseriu dentro do range de 1 a 2050
+        if(lados < 1 || lados > 20){
+            System.out.println("Formato inválido!");
+        }else{
+            for(int i = 1; i <= lados; i++){
+                comprimento += "* ";
+            }
+            comprimento += "* ";
+    
+            //desenha a linha horizontal no topo do quadrado
+            System.out.println(comprimento);
+    
+            // cria a string das linhas de altura do quadrado e armazena numa string
+            String altura = "* ";
+            for(int i = 1; i <= (lados * 2); i++){
+                altura += " ";
+            }
+            altura += "*";
+    
+            // imprime a altura do quadrado
+            for(int i = 1; i <= lados; i++){
+                System.out.println(altura);
+            }
+    
+            //desenha a linha horizontal na base do quadrado
+            System.out.println(comprimento);
+        }
+        
+        input.close();
+    }
+}
+```
 
 ### 4.30 
 **(Palíndromos)** Um palíndromo é uma sequência de caracteres que é lida da esquerda para a direita ou da direita para a esquerda. Por exemplo, cada um dos seguintes inteiros de cinco dígitos é um palíndromo: 12321, 55555, 45554 e 11611. Escreva um aplicativo que lê em um inteiro de cinco dígitos e determina se ele é ou não um palíndromo. Se o número não for de cinco dígitos, exiba uma mensagem de erro e permita que o usuário insira um novo valor.
