@@ -35,6 +35,8 @@ public class CalculaKmPorLitro {
         }
         double litrosPorKm = (double) kmTotal / gasolinaTotal;
         System.out.printf("O consumo TOTAL da todas as viagens em Kilometros por litro foi de: %.2fl/km!%nObrigado por utilizar o app! FIM!", litrosPorKm);
-    
+        
+        //encerra o recurso input
+        input.close();
     }
 }
