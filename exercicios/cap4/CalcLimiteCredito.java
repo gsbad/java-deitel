@@ -11,6 +11,7 @@ public class CalcLimiteCredito {
         int limiteCredito;
         int novoSaldo;
 
+        
         //coleta de dados
         System.out.println("\nInsira o numero da conta:");
         numConta = input.nextInt();
