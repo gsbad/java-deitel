@@ -15,17 +15,17 @@ public class MaiorNumero {
             number = input.nextInt();
             System.out.println();
             
-            //itera pelos numeros inseridos até agora para saber qual o maior
-            for(int i = 1; i <= counter; i++){
-                if(largest < number){
-                    largest = number;
-                    position = counter;
-                }     
-            }
+
+            if(largest < number){
+                largest = number;
+                position = counter;
+            }     
+            
 
             System.out.printf("O maior número inserido até agora foi o %dº numero = %d%n", position, largest);  
             ++counter;
         }
+        System.out.printf("%nO maior número inserido foi %d, na posição %d%n", largest, position);
         input.close();
     }
 }
