@@ -34,5 +34,6 @@ public class CalcLimiteCredito {
         }else{
             System.out.printf("%nLimite de crédito não excedido para a conta %d!%n", numConta);
         }
+        input.close();
     }
 }
