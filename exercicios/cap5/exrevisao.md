@@ -3,25 +3,37 @@
 Preencha as lacunas em cada uma das seguintes afirmações:
 
 a) Em geral, as instruções **for** são utilizadas para repetição controlada por contador e as instruções **while** são utilizadas para repetição controlada por sentinela.
+
 b) A instrução do…while testa a condição de continuação do loop **depois** de executar o corpo do loop; portanto, o corpo sempre executa pelo menos uma vez.
+
 c) A instrução **switch** seleciona entre múltiplas ações com base nos possíveis valores de uma variável ou expressão, ou uma String.
-d) A instrução **continue**, quando executada em uma instrução de repetição, pula as instruções restantes no corpo do loop e prossegue
-com a próxima iteração do loop.
-e) O operador **&&** pode ser utilizado para assegurar que duas condições são ambas verdadeiras antes de escolher certo caminho
-de execução.
+
+d) A instrução **continue**, quando executada em uma instrução de repetição, pula as instruções restantes no corpo do loop e prossegue com a próxima iteração do loop.
+
+e) O operador **&&** pode ser utilizado para assegurar que duas condições são ambas verdadeiras antes de escolher certo caminho de execução.
+
 f) Se a condição de continuação do loop em um cabeçalho "for" for inicialmente **false**, o programa não executará o corpo da instrução for.
+
 g) Os métodos que realizam as tarefas comuns e não exigem os objetos são chamados de métodos **static**.
+
 
 ### 5.2 
 Determine se cada uma das seguintes alternativas é verdadeira ou falsa. Se falsa, explique por quê.
 
 a) O caso default é requerido na instrução de seleção switch. **FALSO** - É opcional
+
 b) A instrução break é requerida no último caso de uma instrução de seleção switch. **FALSO** - A instrução break é utilizada para sair da instrução switch
+
 c) A expressão ((x > y) && (a < b)) é verdadeira se x > y for verdadeiro ou a < b for verdadeira. **FALSO** - Ambas precisam ser verdadeiras
+
 d) Uma expressão contendo o operador || é verdadeira se um ou ambos de seus operandos forem verdadeiros. **VERDADEIRA**
+
 e) O flag de formatação vírgula (,) em um especificador de formato (por exemplo, %,20.2f) indica que um valor deve ser enviado para a saída com um separador de milhares. **VERDADEIRO** - (, é o separador padrao de milhares americano)
+
 f) Para testar para uma série de valores em uma instrução switch, utilize um hífen (–) entre os valores inicial e final da série em um rótulo case. **FALSO** - A instrução switch nao oferece esse mecanismo. Cada caso deve ser testado individualmente com "case"s separados
+
 g) Listar casos consecutivamente sem instruções entre eles permite aos casos executar o mesmo conjunto de instruções. **VERDADEIRO**
+
 
 ### 5.3
 Escreva uma instrução Java ou um conjunto de instruções Java para realizar cada uma das seguintes tarefas:

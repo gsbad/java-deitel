@@ -3,11 +3,17 @@
 ## 2.1
 
 a) Um(a)   **{**   começa o corpo de cada método e um(a)  **}**  termina o corpo de cada método.
+
 b) Você pode usar a declaração **if** para tomar decisões.
+
 c) **//** começa em um comentário de fim de linha.
+
 d) **espaços**, **tabulações** e **linhas em branco** são chamados espaço em branco.
+
 e) **palavras-chave** são reservadas para uso pelo Java.
+
 f) Aplicativos Java iniciam a execução no método **main**.
+
 g) Os métodos **print**, **println** e **printf** exibem informações em uma janela de comando.
 
 ## 2.2
@@ -16,11 +22,15 @@ g) Os métodos **print**, **println** e **printf** exibem informações em uma j
 
 a) Os comentários fazem com que o computador imprima o texto depois das // na tela quando o programa executa. **FALSO** 
 ```Os comentários são ignorados pelo compilador. Podem ser do tipo fim de linha (//), comentario por bloco (/* */) e comentario javadoc (/** */)```
+
 b) Todas as variáveis devem ser atribuídas a um tipo quando são declaradas. **VERDADEIRA**
+
 c) O Java considera que as variáveis number e NuMbEr são idênticas. **FALSO**
 ``` A linguagem JAVA é case sensitive. Faz distinçao de letras maiúsculas e minúsculas ```
+
 d) O operador de resto (%) pode ser utilizado apenas com operandos inteiros. **FALSO** 
 ```É possivel fazer operação de resto com operandos não inteiros ```
+
 e) Os operadores aritméticos *, /, %, + e - têm, todos, o mesmo nível de precedência. **FALSO**
 ``` *, /, % tem maior precedência do que +, - ```
 

@@ -3,15 +3,25 @@
 Preencha a(s) lacuna(s) em cada uma das seguintes instruções:
 
 a) Listas e tabelas de valores podem ser armazenadas em **arrays** e **colections**.
+
 b) Um array é um grupo de **variáveis** (chamadas elementos ou componentes) com valores que contêm todos o mesmo **tipo**.
+
 c) A **instrução for aprimorada** permite iterar pelos elementos de um array sem usar um contador.
+
 d) O número utilizado para referenciar um elemento particular de array é chamado **índice** do elemento.
+
 e) Um array que utiliza dois índices é referido como um array **bidimensional**.
+
 f) Utilize a instrução for aprimorada **for(double number : numbers)** para percorrer array double numbers.
+
 g) Argumentos de linha de comando são armazenados em **Array de strings (Strings[] args)**.
+
 h) Utilize a expressão **args.length** para receber o número total de argumentos em uma linha de comando. Suponha que os argumentos da linha de comando sejam armazenados em String[] args.
+
 i) Dado o comando java MyClass test, o primeiro argumento de linha de comando é **um objeto String "test"**.
+
 j) **Reticências (*tipo*...*nomeParam*)** na lista de parâmetro de um método indicam que o método pode receber um número variável de argumentos.
+
 
 ### 7.2
 Determine se cada um dos seguintes é verdadeiro ou falso. Se falso, explique por quê.

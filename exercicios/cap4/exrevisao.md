@@ -3,26 +3,42 @@
 ### Preencha as lacunas em cada uma das seguintes afirmações:
 
 a) Todos os programas podem ser escritos em termos de três tipos de estruturas de controle: **sequência**, **seleção** e **repetição**.
+
 b) A instrução **if/else** é utilizada para executar uma ação quando uma condição for verdadeira e outra quando essa condição for falsa.
+
 c) Repetir um conjunto de instruções por um número específico de vezes é chamado de repetição **controlada por contador**.
+
 d) Quando não se sabe antecipadamente quantas vezes um conjunto de instruções será repetido, um valor de **flag/sentinela** pode ser utilizado para terminar a repetição.
+
 e) A estrutura de ________ é construída em Java; por padrão, instruções são executadas na ordem que elas aparecem.
+
 f) As variáveis de instância dos tipos char, byte, short, int, long, float e double recebem o valor **ZERO (0)** por padrão.
+
 g) O Java é uma linguagem **fortemente tipada**; ele requer que todas as variáveis tenham um tipo.
+
 h) Se o operador de incremento for *prefixado*; para uma variável, primeiro a variável é incrementada por 1 e, então, seu novo valor é utilizado na expressão.
 
 ## 4.2 
 ### Determine se cada um dos seguintes é verdadeiro ou falso. Se falso, explique por quê.
 
 a) Um algoritmo é um procedimento para resolver um problema em termos das ações a serem executadas e da ordem em que essas ações são executadas. **VERDADEIRO**
+
 b) Um conjunto de instruções dentro de um par de parênteses é chamado bloco. **FALSO - Usa-se chaves**
+
 c) Uma instrução de seleção especifica que uma ação deve ser repetida enquanto algumas condições permanecem verdadeiras. **FALSO - chama-se instruçao de repetição**
+
 d) Uma instrução de controle aninhada aparece no corpo de uma outra instrução de controle. **VERDADEIRA**
+
 e) O Java fornece os operadores aritméticos de atribuição compostos +=, -=, *=, /= e %= para abreviar expressões de atribuição. **VERDADEIRA**
+
 f) Os tipos primitivos (boolean, char, byte, short, int, long, float e double) são portáveis somente em plataformas Windows. **FALSO - sao multiplataforma**
+
 g) Especificar a ordem em que as instruções são executadas em um programa é chamado controle de programa. **VERDADEIRA**
+
 h) O operador de coerção unário (double) cria uma cópia temporária do tipo inteiro do seu operando. **FALSO - do tipo ponto flutuante**
+
 i) Atribui-se às variáveis de instância do tipo boolean o valor true por padrão. **FALSO - false é o padrão**
+
 j) O pseudocódigo ajuda você a pensar sobre um programa antes de tentar escrevê-lo em uma linguagem de programação. **VERDADEIRO**
 
 ## 4.3

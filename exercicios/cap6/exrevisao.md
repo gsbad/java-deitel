@@ -3,17 +3,29 @@
 Preencha as lacunas em cada uma das seguintes afirmações:
 
 a) Um método é invocado com um(a) **chamada de método**.
+
 b) Uma variável conhecida somente dentro do método em que é declarada chama-se **variável local**.
+
 c) A instrução **return** em um método chamado pode ser utilizada para passar o valor de uma expressão de volta para o método de chamada.
+
 d) A palavra-chave **void** indica que um método não retorna um valor.
+
 e) Os dados podem ser adicionados ou removidos somente do(a) **parte superior (LIFO)** de uma pilha.
+
 f) As pilhas são conhecidas como estruturas de dados **Last-to-In First-to-Out (LIFO)**; o último item colocado (inserido) na pilha é o primeiro item retirado (removido) da pilha.
+
 g) As três maneiras de retornar o controle de um método chamado a um chamador são **return**, **return *expressao*** e **chave de fechamento do metodo *}***.
+
 h) Um objeto da classe **SecureRandom** produz números verdadeiramente aleatórios.
+
 i) A pilha de execução de programas contém a memória criada para variáveis locais a cada invocação de método durante a execução de um programa. Esses dados, armazenados como parte da pilha de chamadas de método, são conhecidos como **registro de ativação** ou **quadro de pilha** da chamada de método.
+
 j) Se houver mais chamadas de método do que pode ser armazenado na pilha de execução do programa, um erro conhecido como **estouro de pilha (stack-overflow)** ocorrerá.
+
 k) O **escopo** de uma declaração é a parte de um programa que pode referenciar a entidade na declaração pelo nome.
+
 l) É possível ter diversos métodos com o mesmo nome que operam, separadamente, sobre diferentes tipos ou números de argumentos. Esse recurso é chamado de **sobrecarga (override)**.
+
 
 
 ### 6.2
