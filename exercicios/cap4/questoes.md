@@ -420,17 +420,17 @@ public class MaiorNumero {
             number = input.nextInt();
             System.out.println();
             
-            //itera pelos numeros inseridos até agora para saber qual o maior
-            for(int i = 1; i <= counter; i++){
-                if(largest < number){
-                    largest = number;
-                    position = counter;
-                }     
-            }
+
+            if(largest < number){
+                largest = number;
+                position = counter;
+            }     
+            
 
             System.out.printf("O maior número inserido até agora foi o %dº numero = %d%n", position, largest);  
             ++counter;
         }
+        System.out.printf("%nO maior número inserido foi %d, na posição %d%n", largest, position);
         input.close();
     }
 }
@@ -438,6 +438,20 @@ public class MaiorNumero {
 
 ### 4.22 
 **(Saída no formato de tabela)** Escreva um aplicativo Java que utiliza um loop para imprimir a seguinte tabela de valores:
+```java
+package exercicios.cap4;
+
+public class escreveTabela {
+    public static void main(String[] args) {
+        //N 10*N 100*N 1000*N
+        int n = 1;
+        System.out.printf("%nN%10d*N%10d*N%10d*N%n", (10 * n), (100 * n), (1000 * n));
+        for(n = 1; n <= 5; n++){
+            System.out.printf("%d%10d%12d%12d%n", n, (10 * n), (100 * n), (1000 * n));
+        }
+    }
+}
+```
 
 ### 4.23 
 **(Encontre os dois números maiores)** Utilizando uma abordagem semelhante àquela do Exercício 4.21, encontre os dois maiores valores entre os 10 valores inseridos. [Observação: você só pode inserir cada número uma vez.]
