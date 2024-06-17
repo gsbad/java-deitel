@@ -62,5 +62,5 @@ outras classes. Escreva uma interface de CarbonFootprint com um método getCarbo
 suas classes implemente essa interface para que o método getCarbonFootprint calcule uma pegada de carbono adequada para essa
 classe (confira alguns sites que explicam como calcular pegadas de carbono). Escreva um aplicativo que cria objetos de cada uma das três
 classes, insere referências a esses objetos em ArrayList<CarbonFootprint>, então itera pelo ArrayList polimorficamente invo-
-cando o método getCarbonFootprint de cada objeto. Para cada objeto, imprima algumas informações de identificação e a pegada de
+cand    o o método getCarbonFootprint de cada objeto. Para cada objeto, imprima algumas informações de identificação e a pegada de
 carbono do objeto.
