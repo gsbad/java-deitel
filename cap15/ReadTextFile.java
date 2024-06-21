@@ -21,7 +21,7 @@ public class ReadTextFile {
     //Abre o arquivo clients.txt
     private static void openFile() {
         try {
-            input = new Scanner(Paths.get("cap15/clients.txt"));
+            input = new Scanner(Paths.get("clients.txt"));
         } catch (IOException a) {
             System.err.println("Error opening file. Terminating.");
             System.exit(1); // termina o programa

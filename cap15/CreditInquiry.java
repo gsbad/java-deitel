@@ -58,7 +58,7 @@ public class CreditInquiry {
 
 
     private static void readRecords(MenuOption accountType) {
-        try (Scanner input = new Scanner(Paths.get("cap15/clients.txt"))) {
+        try (Scanner input = new Scanner(Paths.get("clients.txt"))) {
             while (input.hasNext()) {
                 int accountNumber = input.nextInt();
                 String firstName = input.next();
