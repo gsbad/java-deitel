@@ -26,6 +26,9 @@ public class CreditInquiry {
                     break;
                 case DEBIT_BALANCE:
                 System.out.printf("%nAccounts with debit balances:%n");    
+                    break; 
+                case END:
+                System.out.printf("%nApplication terminating!%n");    
                     break;            
             }
             readRecords(accountType);
@@ -40,16 +43,17 @@ public class CreditInquiry {
 
         // exibe opções de solicitação
         System.out.printf("%nEnter request%n%s%n%s%n%s%n%s%n",
-            " 1 - List accounts with zero balances",
-                " 2 - List accounts with credit balances",
-                " 3 - List accounts with debit balances",
-                " 4 - Terminate program");
+                            " 1 - List accounts with zero balances",
+                            " 2 - List accounts with credit balances",
+                            " 3 - List accounts with debit balances",
+                            " 4 - Terminate program");
         try {
             Scanner input = new Scanner(System.in);
             do {
                 System.out.printf("%n? ");
                 request = input.nextInt();
             } while (request < 1 || request > 4); //o laço acontece enquanto o usuario n colocar uma entrada de 1 a 4
+            input.close();
         } catch (NoSuchElementException e) {
             System.err.println("Invalid input. Terminating.");
         }
@@ -67,8 +71,8 @@ public class CreditInquiry {
                 
                 // se o tipo for a conta adequada, exibe o registro
                 if (shouldDisplay(accountType, balance)) 
-                    System.out.printf("%-10d%-12s%-12s%10.2f%n", accountNumber,
-                    firstName, lastName, balance);
+                    System.out.printf("%-10d%-12s%-12s%10.2f%n", 
+                        accountNumber, firstName, lastName, balance);
                 else
                     input.nextLine(); // descarta o restante do registro atual                
             }
