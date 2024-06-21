@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
+//import java.nio.file.Paths;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -64,6 +64,10 @@ public class JFileChooserDemo extends JFrame {
         int result = fileChooser.showOpenDialog(this);
 
         //se o usuario clicou no botao Cancel no dialogo, retorna
+        if(result == JFileChooser.CANCEL_OPTION){
+            System.exit(1);
+        }
+        //retorna o Path representando o arquivo selecionado
         return fileChooser.getSelectedFile().toPath();
     }
 } //fim da classe JFileChooserDemo
