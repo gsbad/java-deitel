@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StaticCharMethods",
+            "request": "launch",
+            "mainClass": "stringscharregex.StaticCharMethods",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "JFileChooserTest",
+            "request": "launch",
+            "mainClass": "serializationfiles.JFileChooserTest",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "projectName": "deitel",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}"
+            ],
+            "args": "",
+            "console": "integratedTerminal"
+        }
+    ]
+}
