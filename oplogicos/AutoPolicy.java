@@ -1,3 +1,5 @@
+package oplogicos;
+
 public class AutoPolicy
 {
    private int accountNumber;

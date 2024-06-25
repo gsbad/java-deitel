@@ -1,3 +1,4 @@
+package arraysarraylists;
 public class InitArrayOld
 {
    public static void main(String[] args)

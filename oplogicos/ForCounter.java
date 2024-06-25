@@ -1,3 +1,4 @@
+package oplogicos;
 public class ForCounter 
 {
    public static void main(String[] args) 

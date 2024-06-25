@@ -1,3 +1,4 @@
+package arraysarraylists;
 public class EnhancedForTest 
 {
    public static void main(String[] args) 

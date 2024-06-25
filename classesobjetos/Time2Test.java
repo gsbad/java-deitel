@@ -1,3 +1,4 @@
+package classesobjetos;
 public class Time2Test 
 {
    public static void main(String[] args)

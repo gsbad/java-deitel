@@ -1,3 +1,4 @@
+package classesobjetos;
 import java.util.EnumSet;
 
 public class EnumTest 

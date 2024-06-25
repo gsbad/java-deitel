@@ -1,4 +1,5 @@
-package cap10;
+package polimorfismointerfaces;
+
 
 public class BasePlusComissionEmployee extends ComissionEmployee{
     //váriavel de instância espécifica da subclasse

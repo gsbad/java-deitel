@@ -1,3 +1,4 @@
+package heranca;
 public class BasePlusCommissionEmployeeOld extends CommissionEmployeeOld
 {
    private double baseSalary;

@@ -1,4 +1,4 @@
-package cap10;
+package polimorfismointerfaces;
 
 public class PayableInterfaceTest {
     public static void main(String[] args) {

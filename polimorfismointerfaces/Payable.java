@@ -1,4 +1,4 @@
-package cap10;
+package polimorfismointerfaces;
 
 public interface Payable {
     /**

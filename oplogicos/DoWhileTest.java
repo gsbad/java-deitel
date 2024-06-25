@@ -1,3 +1,4 @@
+package oplogicos;
 public class DoWhileTest 
 {  
    public static void main(String[] args)

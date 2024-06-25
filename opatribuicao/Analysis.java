@@ -1,3 +1,5 @@
+package opatribuicao;
+
 import java.util.Scanner;
 
 public class Analysis 

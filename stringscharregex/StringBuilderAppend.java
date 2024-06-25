@@ -1,4 +1,4 @@
-package cap14;
+package stringscharregex;
 
 public class StringBuilderAppend {
     public static void main(String[] args) {

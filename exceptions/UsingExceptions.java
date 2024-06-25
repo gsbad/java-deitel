@@ -1,4 +1,5 @@
-package cap11;
+package exceptions;
+
 
 public class UsingExceptions {
     public static void main(String[] args) {

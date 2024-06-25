@@ -1,4 +1,4 @@
-package cap15;
+package serializationfiles;
 
 public enum MenuOption {
     ZERO_BALANCE(1),

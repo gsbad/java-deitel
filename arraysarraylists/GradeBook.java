@@ -1,3 +1,4 @@
+package arraysarraylists;
 public class GradeBook
 {
    private String courseName;

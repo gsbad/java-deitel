@@ -1,4 +1,4 @@
-package cap3;
+package classobjmethodsstrings;
 
 import javax.swing.JOptionPane;
 

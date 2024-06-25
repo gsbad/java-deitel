@@ -1,3 +1,4 @@
+package oplogicos;
 public class Sum 
 {
    public static void main(String[] args)

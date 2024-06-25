@@ -1,3 +1,4 @@
+package arraysarraylists;
 public class VarargsTest 
 {
    public static double average(double... numbers)

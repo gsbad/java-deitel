@@ -1,4 +1,4 @@
-package cap14;
+package stringscharregex;
 
 public class OtherCharMethods {
     public static void main(String[] args) {

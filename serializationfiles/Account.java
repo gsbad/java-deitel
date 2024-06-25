@@ -1,4 +1,5 @@
-package cap15;
+package serializationfiles;
+
 import java.io.Serializable;;
 
 public class Account implements Serializable{

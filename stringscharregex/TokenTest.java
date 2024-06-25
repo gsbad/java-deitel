@@ -1,4 +1,4 @@
-package cap14;
+package stringscharregex;
 
 import java.util.Scanner;
 

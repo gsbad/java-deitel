@@ -1,3 +1,4 @@
+package opatribuicao;
 import javax.swing.JFrame;
 
 public class DrawPanelTest

@@ -1,3 +1,4 @@
+package oplogicos;
 public class WhileCounter 
 {
    public static void main(String[] args) 

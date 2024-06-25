@@ -1,3 +1,4 @@
+package arraysarraylists;
 import javax.swing.JFrame;
 
 public class DrawRainbowTest

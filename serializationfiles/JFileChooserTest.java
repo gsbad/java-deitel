@@ -1,4 +1,4 @@
-package cap15;
+package serializationfiles;
 
 import java.io.IOException;
 import javax.swing.JFrame;

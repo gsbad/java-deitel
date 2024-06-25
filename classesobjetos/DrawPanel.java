@@ -1,3 +1,4 @@
+package classesobjetos;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.security.SecureRandom;

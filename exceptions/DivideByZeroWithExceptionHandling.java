@@ -1,4 +1,4 @@
-package cap11;
+package exceptions;
 
 import java.util.Scanner;
 import java.util.InputMismatchException;

@@ -1,3 +1,4 @@
+package classesobjetos;
 import static java.lang.Math.*;
 
 public class StaticImportTest 

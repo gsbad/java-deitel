@@ -1,3 +1,4 @@
+package oplogicos;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 

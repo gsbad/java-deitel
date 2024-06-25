@@ -1,3 +1,4 @@
+package classesobjetos;
 public class Time1  
 {
    private int hour; // 0 - 23

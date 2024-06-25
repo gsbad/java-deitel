@@ -1,3 +1,4 @@
+package oplogicos;
 public class AutoPolicyTest
 {
    public static void main(String[] args){

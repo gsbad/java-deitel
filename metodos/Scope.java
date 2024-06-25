@@ -1,3 +1,4 @@
+package metodos;
 public class Scope
 {
    private static int x = 1; 

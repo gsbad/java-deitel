@@ -1,4 +1,5 @@
-package cap10;
+package polimorfismointerfaces;
+
 
 public abstract class Employee implements Payable{
     private final String firstName;

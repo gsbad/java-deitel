@@ -1,3 +1,4 @@
+package arraysarraylists;
 public class BarChart 
 {
    public static void main(String[] args)

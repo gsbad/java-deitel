@@ -1,3 +1,4 @@
+package oplogicos;
 import java.util.Scanner; 
 
 public class LetterGrades 

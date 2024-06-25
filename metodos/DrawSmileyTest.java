@@ -1,3 +1,4 @@
+package metodos;
 import javax.swing.JFrame;
 
 public class DrawSmileyTest

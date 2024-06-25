@@ -1,3 +1,4 @@
+package classesobjetos;
 public class MemberAccessTest 
 {
    public static void main(String[] args)

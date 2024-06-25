@@ -1,3 +1,4 @@
+package metodos;
 import java.util.Scanner;
 
 public class MaximumFinder 
