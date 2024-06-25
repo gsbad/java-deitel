@@ -18,7 +18,7 @@ public class CreateTextFile {
 
     private static void openFile() {
         try {
-            output = new Formatter("clients.txt");
+            output = new Formatter("serializationfiles/clients.txt");
         } catch (SecurityException securityException) {
             System.err.println("Write permission denied. Terminating.");
             System.exit(1);

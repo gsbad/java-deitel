@@ -20,7 +20,7 @@ public class CreateSequentialFile {
     private static void openFile() {
         try {
             //gera saida dos dados no aquivo
-            output = new ObjectOutputStream(Files.newOutputStream(Paths.get("clients.ser")));
+            output = new ObjectOutputStream(Files.newOutputStream(Paths.get("serializationfiles/clients.ser")));
 
         } catch (IOException ioException) {
             System.err.println("Error opening file! Terminating!");

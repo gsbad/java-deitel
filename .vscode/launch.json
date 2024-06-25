@@ -3,6 +3,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CreateTextFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.CreateTextFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "CreateSequentialFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.CreateSequentialFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "CreditInquiry",
+            "request": "launch",
+            "mainClass": "serializationfiles.CreditInquiry",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "ReadSequentialFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.ReadSequentialFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "ReadTextFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.ReadTextFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "Teste",
+            "request": "launch",
+            "mainClass": "serializationfiles.Teste",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
             "name": "StaticCharMethods",
             "request": "launch",
             "mainClass": "stringscharregex.StaticCharMethods",

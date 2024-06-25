@@ -18,7 +18,7 @@ public class ReadSequentialFile {
     //Abre o arquivo clients.txt
     private static void openFile() {
         try {
-            input = new ObjectInputStream(Files.newInputStream(Paths.get("clients.ser")));
+            input = new ObjectInputStream(Files.newInputStream(Paths.get("serializationfiles/clients.ser")));
 
         } catch (IOException a) {
             System.err.println("Error opening file. Terminating.");
