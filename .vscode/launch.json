@@ -1,0 +1,95 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LabelDemo",
+            "request": "launch",
+            "mainClass": "heranca.LabelDemo",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "FileAndDirectoryInfo",
+            "request": "launch",
+            "mainClass": "serializationfiles.FileAndDirectoryInfo",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "JFileChooserTest",
+            "request": "launch",
+            "mainClass": "serializationfiles.JFileChooserTest",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "CreateTextFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.CreateTextFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "CreateSequentialFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.CreateSequentialFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "CreditInquiry",
+            "request": "launch",
+            "mainClass": "serializationfiles.CreditInquiry",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "ReadSequentialFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.ReadSequentialFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "ReadTextFile",
+            "request": "launch",
+            "mainClass": "serializationfiles.ReadTextFile",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "Teste",
+            "request": "launch",
+            "mainClass": "serializationfiles.Teste",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "StaticCharMethods",
+            "request": "launch",
+            "mainClass": "stringscharregex.StaticCharMethods",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "JFileChooserTest",
+            "request": "launch",
+            "mainClass": "serializationfiles.JFileChooserTest",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "projectName": "deitel",
+            "cwd": "${workspaceFolder}",
+            "classPaths": [
+                "${workspaceFolder}"
+            ],
+            "args": "",
+            "console": "integratedTerminal"
+        }
+    ]
+}
