@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StringCompare",
+            "request": "launch",
+            "mainClass": "stringscharregex.StringCompare",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "StringConcatenetion",
+            "request": "launch",
+            "mainClass": "stringscharregex.StringConcatenetion",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
             "name": "CreateTextFile",
             "request": "launch",
             "mainClass": "serializationfiles.CreateTextFile",
