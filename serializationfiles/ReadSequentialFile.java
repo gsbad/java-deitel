@@ -5,6 +5,7 @@ import java.io.EOFException;
 import java.io.ObjectInputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Locale;
 
 public class ReadSequentialFile {
 
@@ -34,7 +35,7 @@ public class ReadSequentialFile {
         try {
             while (true) {
                 Account record = (Account) input.readObject();
-                System.out.printf("%-10d%-12s%-12s%10.2f%n",
+                System.out.printf(Locale.US, "%-10d%-12s%-12s%10.2f%n",
                             record.getAccount(), record.getFirstName(), 
                             record.getLastName(), record.getBalance());
             }

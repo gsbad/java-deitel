@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Locale;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -30,6 +31,7 @@ public class CreateSequentialFile {
 
     private static void addRecords() {
         Scanner input = new Scanner(System.in);
+        input.useLocale(Locale.US);  // formatação correta dos números
         System.out.printf("%s%n%s%n? ", "Enter account number, first name, last name and balance." , 
                             "Enter end-of-file indicator to end input.");
         // Faz o loop até o indicador de fim de arquivo
