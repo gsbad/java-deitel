@@ -1,5 +1,4 @@
 package jdbc;
-// Fig. 24.28: DisplayQueryResults.java
 // Exibe os resultados de várias consultas.
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
