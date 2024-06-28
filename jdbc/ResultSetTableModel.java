@@ -1,6 +1,5 @@
 package jdbc;
-// Fig. 24.25: ResultSetTableModel.java
-// A TableModel that supplies ResultSet data to a JTable.
+// Um TableModel que fornece os dados de um ResultSet a um JTable
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
