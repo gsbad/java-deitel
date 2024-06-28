@@ -1,4 +1,5 @@
 package heranca;
+
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import java.awt.Image;
