@@ -11,7 +11,7 @@ public class DisplayAuthors {
     public static void main(String[] args) {
         //Exibindo o conteudo da tabela Authors
 
-        final String DATABASE_URL = "jdbc:derby:books";
+        final String DATABASE_URL = "jdbc:derby:jdbc/books";
         final String SELECT_QUERY = "SELECT authorID, firstName, lastName FROM authors";
         
         //usa try-com-recursos para se conectar e consultar o banco de dados
@@ -25,12 +25,12 @@ public class DisplayAuthors {
             
             System.out.printf("Authors Table of Books Database:%n%n");
             
-            //exibe os nomes de coluna no ResultSet
+            //exibe os nomes de coluna no ResultSet (ResultSet começa em 1)
             for (int i = 1; i <= numberOfColumns; i++)
                 System.out.printf("%-8s\t", metaData.getColumnName(i));
             System.out.println();
 
-            //exibe os re sultados da consulta
+            //exibe os resultados da consulta (ResultSet começa em 1)
             while (resultSet.next()) {
                 for (int i = 1; i <= numberOfColumns; i++)
                     System.out.printf("%-8s\t", resultSet.getObject(i));

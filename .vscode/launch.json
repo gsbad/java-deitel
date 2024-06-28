@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DisplayQueryResults",
+            "request": "launch",
+            "mainClass": "jdbc.DisplayQueryResults",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
             "name": "DisplayAuthors",
             "request": "launch",
             "mainClass": "jdbc.DisplayAuthors",
