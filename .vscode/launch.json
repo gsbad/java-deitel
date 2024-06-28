@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AddressBookDisplay",
+            "request": "launch",
+            "mainClass": "jdbc.AddressBookDisplay",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
+            "name": "JdbcRowSetTest",
+            "request": "launch",
+            "mainClass": "jdbc.JdbcRowSetTest",
+            "projectName": "deitel_4408bb13"
+        },
+        {
+            "type": "java",
             "name": "DisplayQueryResults",
             "request": "launch",
             "mainClass": "jdbc.DisplayQueryResults",
