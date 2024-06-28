@@ -1,6 +1,6 @@
 package jdbc;
 // Fig. 24.28: DisplayQueryResults.java
-// Display the results of various queries.
+// Exibe os resultados de várias consultas.
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -24,26 +24,26 @@ import javax.swing.table.TableModel;
 
 public class DisplayQueryResults extends JFrame 
 {
-   // database URL, username and password
+   // URL do banco de dados, nome de usuário e senha
    private static final String DATABASE_URL = "jdbc:derby:jdbc/books";
    private static final String USERNAME = "deitel";
    private static final String PASSWORD = "deitel";
    
-   // default query retrieves all data from authors table
+   // Consulta padrão que recupera todos os dados da tabela authors
    private static final String DEFAULT_QUERY = "SELECT * FROM authors";
    
    private static ResultSetTableModel tableModel;
 
    public static void main(String args[]) 
    {   
-      // create ResultSetTableModel and display database table
+      // Cria ResultSetTableModel e exibe a tabela do banco de dados
       try 
       {
-         // create TableModel for results of query SELECT * FROM authors
+         // Cria um TableModel para os resultados da consulta SELECT * FROM authors
          tableModel = new ResultSetTableModel(
             DATABASE_URL, USERNAME, PASSWORD, DEFAULT_QUERY);
 
-         // set up JTextArea in which user types queries
+         // Configura JTextArea onde o usuário digita as consultas
          final JTextArea queryArea = new JTextArea(DEFAULT_QUERY, 3, 100);
          queryArea.setWrapStyleWord(true);
          queryArea.setLineWrap(true);
@@ -52,40 +52,39 @@ public class DisplayQueryResults extends JFrame
             ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, 
             ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
          
-         // set up JButton for submitting queries
-         JButton submitButton = new JButton("Submit Query");
+         // Configura JButton para enviar consultas
+         JButton submitButton = new JButton("Enviar Consulta");
 
-         // create Box to manage placement of queryArea and 
-         // submitButton in GUI
+         // Cria Box para gerenciar posicionamento de queryArea e submitButton na GUI
          Box boxNorth = Box.createHorizontalBox();
          boxNorth.add(scrollPane);
          boxNorth.add(submitButton);
 
-         // create JTable based on the tableModel
+         // Cria JTable baseada no tableModel
          JTable resultTable = new JTable(tableModel);
          
-         JLabel filterLabel = new JLabel("Filter:");
+         JLabel filterLabel = new JLabel("Filtro:");
          final JTextField filterText = new JTextField();
-         JButton filterButton = new JButton("Apply Filter");
+         JButton filterButton = new JButton("Aplicar Filtro");
          Box boxSouth = Box.createHorizontalBox();
          
          boxSouth.add(filterLabel);
          boxSouth.add(filterText);
          boxSouth.add(filterButton);
          
-         // place GUI components on JFrame's content pane
-         JFrame window = new JFrame("Displaying Query Results");
+         // Coloca os componentes da GUI no content pane do JFrame
+         JFrame window = new JFrame("Exibindo Resultados da Consulta");
          window.add(boxNorth, BorderLayout.NORTH);
          window.add(new JScrollPane(resultTable), BorderLayout.CENTER);
          window.add(boxSouth, BorderLayout.SOUTH);
 
-         // create event listener for submitButton
+         // Cria listener de eventos para submitButton
          submitButton.addActionListener(        
             new ActionListener() 
             {
                public void actionPerformed(ActionEvent event)
                {
-                  // perform a new query
+                  // Executa uma nova consulta
                   try 
                   {
                      tableModel.setQuery(queryArea.getText());
@@ -93,11 +92,11 @@ public class DisplayQueryResults extends JFrame
                   catch (SQLException sqlException) 
                   {
                      JOptionPane.showMessageDialog(null, 
-                        sqlException.getMessage(), "Database error", 
+                        sqlException.getMessage(), "Erro de Banco de Dados", 
                         JOptionPane.ERROR_MESSAGE);
                      
-                     // try to recover from invalid user query 
-                     // by executing default query
+                     // Tenta se recuperar de consulta inválida do usuário 
+                     // executando a consulta padrão
                      try 
                      {
                         tableModel.setQuery(DEFAULT_QUERY);
@@ -106,28 +105,28 @@ public class DisplayQueryResults extends JFrame
                      catch (SQLException sqlException2) 
                      {
                         JOptionPane.showMessageDialog(null, 
-                           sqlException2.getMessage(), "Database error", 
+                           sqlException2.getMessage(), "Erro de Banco de Dados", 
                            JOptionPane.ERROR_MESSAGE);
          
-                        // ensure database connection is closed
+                        // Garante que a conexão com o banco de dados seja fechada
                         tableModel.disconnectFromDatabase();
          
-                        System.exit(1); // terminate application
+                        System.exit(1); // Termina a aplicação
                      }                 
                   } 
                } 
             }         
-         ); // end call to addActionListener
+         ); // Fim da chamada para addActionListener
          
          final TableRowSorter<TableModel> sorter = 
             new TableRowSorter<TableModel>(tableModel);
          resultTable.setRowSorter(sorter);
          
-         // create listener for filterButton
+         // Cria listener de eventos para filterButton
          filterButton.addActionListener(           
             new ActionListener() 
             {
-               // pass filter text to listener
+               // Passa o texto do filtro para o listener
                public void actionPerformed(ActionEvent e) 
                {
                   String text = filterText.getText();
@@ -144,21 +143,21 @@ public class DisplayQueryResults extends JFrame
                      catch (PatternSyntaxException pse) 
                      {
                         JOptionPane.showMessageDialog(null,
-                           "Bad regex pattern", "Bad regex pattern",
+                           "Padrão de regex inválido", "Padrão de regex inválido",
                            JOptionPane.ERROR_MESSAGE);
                      }
                   } 
                } 
             } 
-         ); // end call to addActionLister
+         ); // Fim da chamada para addActionListener
 
-         // dispose of window when user quits application (this overrides
-         // the default of HIDE_ON_CLOSE)
+         // Fecha a janela quando o usuário fecha a aplicação (substitui
+         // o padrão HIDE_ON_CLOSE)
          window.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
          window.setSize(500, 250); 
          window.setVisible(true); 
          
-         // ensure database is closed when user quits application
+         // Garante que o banco de dados seja fechado quando o usuário fecha a aplicação
          window.addWindowListener(
             new WindowAdapter() 
             {
@@ -173,9 +172,9 @@ public class DisplayQueryResults extends JFrame
       catch (SQLException sqlException) 
       {
          JOptionPane.showMessageDialog(null, sqlException.getMessage(), 
-            "Database error", JOptionPane.ERROR_MESSAGE);
+            "Erro de Banco de Dados", JOptionPane.ERROR_MESSAGE);
          tableModel.disconnectFromDatabase();
-         System.exit(1); // terminate application
+         System.exit(1); // Termina a aplicação
       }     
    } 
 }
