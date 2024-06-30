@@ -5,6 +5,7 @@ public class Time2
    private int minute; // 0 - 59
    private int second; // 0 - 59
 
+   //Construtor Time2 sobrecarregado (overloading) 5 vezes
    public Time2()
    {
       this(0, 0, 0);
@@ -101,7 +102,7 @@ public class Time2
       return String.format(
          "%02d:%02d:%02d", getHour(), getMinute(), getSecond());
    } 
-
+   @Override
    public String toString()
    {
       return String.format("%d:%02d:%02d %s", 
