@@ -3,53 +3,41 @@
 import java.util.Stack;
 import java.util.EmptyStackException;
 
-public class StackTest 
-{
-   public static void main(String[] args)
-   {
-      Stack<Number> stack = new Stack<>(); // create a Stack
+public class StackTest {
+   public static void main(String[] args) {
+      //Cria-se uma Stack<Number> (Lê-se: Stack de Number)
+      Stack<Number> stack = new Stack<>();
 
-      // use push method
-      stack.push(12L); // push long value 12L
-      System.out.println("Pushed 12L");
-      printStack(stack);
-      stack.push(34567); // push int value 34567
-      System.out.println("Pushed 34567");
-      printStack(stack);
-      stack.push(1.0F); // push float value 1.0F
-      System.out.println("Pushed 1.0F");
-      printStack(stack);
-      stack.push(1234.5678); // push double value 1234.5678
-      System.out.println("Pushed 1234.5678 ");
-      printStack(stack);
+      //utiliza o metodo push
+      stack.push(12L);
+      stack.push(3.14F);
+      stack.push(42);
+      stack.push(0.666);
+      stack.push(784515);
+      stack.push(333.333);
+      stack.push(99L);
+      
+      //LIFO - Last in, First Out. Topo da pilha naturalmente será o 99
+      System.out.printf("%nTopo da pilha: %d%n", stack.peek());
 
-      // remove items from stack
-      try 
-      {
+      try {
          Number removedObject = null;
-
-         // pop elements from stack
-         while (true) 
-         {
-            removedObject = stack.pop(); // use pop method
-            System.out.printf("Popped %s%n", removedObject);
+         ///remove elementos da pilha
+         while (true) {
+            removedObject = stack.pop(); //utiliza o metodo pop
+            System.out.printf("%nElemento removido: %s%n", removedObject);
             printStack(stack);
-         } 
-      } 
-      catch (EmptyStackException emptyStackException) 
-      {
-         emptyStackException.printStackTrace();
-      } 
-   } 
+         }
+      } catch (EmptyStackException e) {
+         e.printStackTrace();
+      }
 
-   // display Stack contents
-   private static void printStack(Stack<Number> stack)
-   {
+   }
+   //exibe o conteudo de stack
+   private static void printStack(Stack<Number> stack) {
       if (stack.isEmpty())
-         System.out.printf("stack is empty%n%n"); // the stack is empty
-      else // stack is not empty
-         System.out.printf("stack contains: %s (top)%n", stack);      
-   } 
-} // end class StackTest
-
-
+         System.out.printf("%nStack está vazia%n", stack);
+      else
+         System.out.printf("%nConteudo da stack: %s%n", stack);
+   }
+}

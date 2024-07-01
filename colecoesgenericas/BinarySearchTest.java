@@ -5,41 +5,38 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.ArrayList;
 
-public class BinarySearchTest 
-{
-   public static void main(String[] args)
-   {
-      // create an ArrayList<String> from the contents of colors array
-      String[] colors = {"red", "white", "blue", "black", "yellow", 
-         "purple", "tan", "pink"};
-      List<String> list = 
-         new ArrayList<>(Arrays.asList(colors));
+public class BinarySearchTest {
+   public static void main(String[] args) {
+      //Cria um ArrayList a partir do conteudo de array colors
+      String[] colors = {"red", "white", "blue", "black", "yellow", "purple", "tan", "pink"};
 
-      Collections.sort(list); // sort the ArrayList
-      System.out.printf("Sorted ArrayList: %s%n", list);
+      System.out.printf("%n%nUnsorted array: %s%n", Arrays.asList(colors));
 
-      // search list for various values
-      printSearchResults(list, "black"); // first item
-      printSearchResults(list, "red"); // middle item
-      printSearchResults(list, "pink"); // last item
-      printSearchResults(list, "aqua"); // below lowest
-      printSearchResults(list, "gray"); // does not exist
-      printSearchResults(list, "teal"); // does not exist
-   }      
+      List<String> list = new ArrayList<>(Arrays.asList(colors));
 
-   // perform search and display result
-   private static void printSearchResults(
-      List<String> list, String key)
-   {
+      //classifica o ArrayList
+      Collections.sort(list);
+
+      System.out.printf("%nSorted array: %s%n", list);
+
+      printSearchResults(list, "black");
+      printSearchResults(list, "diamond");
+      printSearchResults(list, "brown");
+      printSearchResults(list, "blue");
+      printSearchResults(list, "red");
+      printSearchResults(list, "yellow");
+      printSearchResults(list, "pink");
+   }
+   //realiza pesquisa e exibe o resultado
+   private static void printSearchResults(List<String> list, String key) {
       int result = 0;
 
       System.out.printf("%nSearching for: %s%n", key);
       result = Collections.binarySearch(list, key);
-      
-      if (result >= 0)
-         System.out.printf("Found at index %d%n", result);
-      else
-         System.out.printf("Not Found (%d)%n",result);
-   } 
-} // end class BinarySearchTest
 
+      if (result >= 0)
+         System.out.printf("%n%s founded at index %d%n", key, result);
+      else
+         System.out.printf("%n%s not founded (%d)%n", key, result);
+   }
+}

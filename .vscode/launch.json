@@ -3,6 +3,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SetTest",
+            "request": "launch",
+            "mainClass": "SetTest",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "PriorityQueueTest",
+            "request": "launch",
+            "mainClass": "PriorityQueueTest",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "StackTest",
+            "request": "launch",
+            "mainClass": "StackTest",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "Algorithms2",
+            "request": "launch",
+            "mainClass": "Algorithms2",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTest",
+            "request": "launch",
+            "mainClass": "BinarySearchTest",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
+            "name": "Algorithms1",
+            "request": "launch",
+            "mainClass": "Algorithms1",
+            "projectName": "java-deitel_17ebc8bf"
+        },
+        {
+            "type": "java",
             "name": "SelectionSortTest",
             "request": "launch",
             "mainClass": "pesquisaclassificacao.SelectionSortTest",

@@ -4,45 +4,40 @@ import java.util.List;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Algorithms1 
-{
-   public static void main(String[] args)
-   {
-      // create and display a List< Character >
-      Character[] letters = {'P', 'C', 'M'};
-      List<Character> list = Arrays.asList(letters); // get List
-      System.out.println("list contains: ");
+public class Algorithms1 {
+   public static void main(String[] args) {
+      // cria e exibe uma List<Character>
+      Character[] letters = {'A', 'B', 'C', 'D', 'Z', 'E'};
+      List<Character> list =  Arrays.asList(letters); //Obtem List
+      System.out.println("\nCharacters: ");
       output(list);
 
-      // reverse and display the List<Character>
-      Collections.reverse(list); // reverse order the elements
-      System.out.printf("%nAfter calling reverse, list contains:%n");
+      //inverte e exibe uma List<Character>
+      Collections.reverse(list);
+      System.out.printf("%nReversed list: %n");
       output(list);
 
-      // create copyList from an array of 3 Characters
-      Character[] lettersCopy = new Character[3]; 
-      List<Character> copyList = Arrays.asList(lettersCopy); 
+      //cria CopyList de um array de 3 caracteres
+      Character[] lettersCopy = new Character[6];
+      List<Character> copyList = Arrays.asList(lettersCopy);
 
-      // copy the contents of list into copyList
+      //copia o conteudo da List para copyList
       Collections.copy(copyList, list);
-      System.out.printf("%nAfter copying, copyList contains:%n");
+      System.out.printf("%nAfter copying copyList contains: %n");
       output(copyList);
 
-      // fill list with Rs 
-      Collections.fill(list, 'R'); 
-      System.out.printf("%nAfter calling fill, list contains:%n");
+      //preenche a List com R usando fill
+      Collections.fill(list, 'R');
+      System.out.printf("%nAfter fillying list with R: %n");
       output(list);
-   } 
+   }
 
-   // output List information
-   private static void output(List<Character> listRef)
-   {
+   private static void output(List<Character> listRef) {
       System.out.print("The list is: ");
-
-      for (Character element : listRef)
-         System.out.printf("%s ", element);
-
+      for(Character c : listRef)
+         System.out.printf("%c ", c);
+      
       System.out.printf("%nMax: %s", Collections.max(listRef));
-      System.out.printf("  Min: %s%n", Collections.min(listRef));
-   } 
+      System.out.printf("%nMin: %s", Collections.min(listRef));
+   }
 }
